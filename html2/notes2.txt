@@ -1,0 +1,53 @@
+Lists
+lists are used to display content which represents a list.
+
+Unordered list: used to list unordered items.
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+
+Ordered list: used to list ordered items.
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+</ol>
+
+Tables
+the <table> tag is used to define tables in HTML. It is used to formats & display tabular data.
+
+tr tag: used to display table row
+tr tag: used to display table data
+th tag: used to place of table data for displaying table headers.
+
+We can define as many table rows as we want.
+To add a caption to the table, we use <caption> tag inside table.
+
+thead tag: used to wrap table head (caption & tr with th)
+tbody tag: used to wrap the table body
+
+colspan attribute
+This attribute is used to create cells spanning multiple columns.
+<th colspan="3">Harry</th> (Span 3 columns)
+
+HTML forms 
+An HTML form is used to collect input from the user form tag is used for the same.
+<form>
+--Element of the form--
+</form>'
+
+there are different form elements for different kinds of user input.
+
+input element:- Can be of type text, checkbox, radio, button and submit we also have a 'file' type.
+textarea :- Defines a multi line text input cols and row attribute can be used to size the textarea.
+select element:- Defines a drop down list.
+
+NOTE: you don't have to remember all the tags, you will automatically memorize them with practice.
+Embedding Videos
+Videos tag is used to play videos in HTML
+<video src='harry.mp4'>Error</video>
+
+Attribute for video
+We can use:
+width: To adjust width of a video(Height automatically adjusts)
+we can use autoplay/loop to autoplay or loop the video.

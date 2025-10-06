@@ -1,0 +1,93 @@
+HTML is just an skeletal layout of a website. We need CSS to design a website add styles to it and make it look beautiful.
+
+What is CSS
+CSS stands for cascading style sheets
+CSS is optional but it converts an off looking HTML page into a beautiful & responsive website
+
+installing VS Code
+We will use microsoft visual studio code as a tool to edit our code. It is very powerful, free and customizable.
+
+Why learn CSS?
+CSS is a very demanded skill in the world of web development. If you are successfully able to master CSS,
+you can customize your website as per your liking.
+
+Your first line of CSS 
+create a css file inside your directory and add it to your HTML. Add the following line to your CSS
+body{
+    background-color: red;
+}
+This will make your page background is red
+
+
+                   Chapter-1
+
+We will create our first CSS website in this section.
+
+What is DOM?
+DOM stands for document object model. when a page is loaded the browser creates a DOM of the page
+which is constructed as a tree of objects.
+
+HTML id and class attributes
+when an HTML element is given an id, it serves as a unique identifier for that element.
+On the other hand, when an HTML element is given a class, it now belongs to that class. More than one elements
+can belong to a single class but every element must have a unique id (if assigned).
+
+We can add multiple classes to an element like this 
+<div id="first" class="c1 c2 c3"(multiple classes followed by spaces)>..........</div>
+
+Three ways to add CSS to HTML
+1. <style>tag -> Adding <style>.......</style> to HTML
+2. Inline CSS -> Adding CSS using style attributes
+3. External CSS -> Adding a stylesheet (.css) to html using <link> tag.
+
+CSS Selectors
+A CSS selector is used to select an HTML elements for styling.
+
+body{                  ->Selector
+    color:red; ->Declaration(property:value)
+    background:pink; ->Declaration
+}
+
+Element Selectors
+It is used to select an element based off the tag name
+ for example:
+h2{
+    color:blue;
+}
+
+ID Selectors
+It is used to select an element with a given id 
+For example:
+#first{                   ->#is used to target by id
+    color:white;
+    background:black;
+}
+
+Class Selector
+It is used to select an element with a given class
+for example:
+.red{
+    background:red;
+}
+
+Important Notes:
+-> We can group selectors like this:
+h1,h2,h3,div{
+    color:blue;      ->h1,h2,h3 and div will be group
+}
+
+-> We can use element class as a selector like this:
+p.red{
+    color:red;       ->all paragraphs of will get color of red
+}
+
+* can be used as a universal selector to select all the elements
+*{
+    margin:0;
+    padding:0;
+}
+
+An inline style will override external and internal styles
+
+Comments in CSS
+comments in css is text which is not parse and is thus ignored

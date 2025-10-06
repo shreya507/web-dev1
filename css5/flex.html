@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox & Grid</title>
+    <style>
+        .container{
+            border: 2px solid green;
+            display: flex;
+            height: 80vh;
+            /* justify-content: center; */
+            align-items: center;
+            /* flex-direction: row; */
+            flex-wrap: wrap;
+            align-content: flex-start;
+            flex-flow: row wrap;
+            /* gap: 30px; */
+            gap: 40px 40px;
+            /* row-gap: 40px;
+            column-gap: 40px; */
+
+            /* There is no justify-items in flexbox */
+        }
+        .item{
+            height: 72px;
+            width: 72px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            /* margin: 4px; */
+        }
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        .item1{
+            flex-grow: 2;
+            flex-shrink: 2;
+            align-self: flex-start;
+        }
+        .contain{
+            width: 80vw;
+            height: 100vh;
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            gap: 34px;
+            row-gap: 10px;
+            column-gap: 10px;
+            justify-items: center;
+            align-items: center;
+            /* grid-template-columns: [first] 120px [second] 120px [third];
+            grid-template-rows: 100px 100px 100px; */
+        }
+        .items{
+            border: 2px solid palegreen;
+            height: 55px;
+            /* width: 55px; */
+        }
+        .item-4{
+            grid-column: second/third;
+            grid-row: 1/2;
+        }
+        .item-1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            /* or you can do same thing */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contain">
+        <div class="items item-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item-4">4</div>
+        <div class="items">5</div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+</body>
+</html>

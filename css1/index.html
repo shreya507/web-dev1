@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css" class="css">
+    <style>
+        /* Element Selector */
+        div,
+        span {
+            color: red;
+            /* background-color: aqua; */
+        }
+
+        /* Class selector */
+        .aqua {
+            background-color: aqua;
+        }
+
+        /* Id Selector */
+        #green {
+            background-color: green;
+        }
+
+        /* Child Selector */
+
+        /* div>p {
+            color:blue;
+            background-color: aliceblue;
+        } */
+
+        /* Descendant selector */
+
+        div p {
+            color: blue;
+            background-color: aliceblue;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+        a:visited {
+            color: yellow;
+        }
+
+        a:link {
+            color: cornflowerblue;
+        }
+
+        a:active {
+            background-color: aqua;
+        }
+
+        a:hover {
+            background-color: coral;
+        }
+
+        p:first-child {
+            background-color: lightgoldenrodyellow;
+        }
+        /* this is internal Css */
+
+        .box:first-child {
+            background-color: aqua;
+        }
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        p, a, .box, [data-color="primary"]{
+            margin-top: 45px;
+            padding-top: 15px;
+        }
+
+        .box:nth-child(even){
+            background-color: lightblue;
+        }
+        .box:nth-last-child(2){
+            background-color: mediumaquamarine;
+        }
+
+        /* CSS ke through element ko dynamically insert kiya jata hai */
+        .boxes::before{
+            content: "Shreya is fine";
+        }
+
+        .boxes::after{
+            content: "Web dev sigma course";
+            color: blueviolet;
+        }
+
+        ::selection{
+            background-color: lightgreen;
+            color: aqua;
+        }
+
+        .box::first-letter{
+            color: salmon;
+            font-size: 22px;
+        }
+
+        input::placeholder{
+            color: chartreuse;
+        }
+    </style>
+    <!-- Here div and span is selector and color and other thing is declaration -->
+</head>
+
+<body>
+    <h1 style="color: yellow; background-color: lightcoral;">Three ways to add Css to HTML</h1>
+    <div class="selector">I am a selector</div>
+    <main>
+        <p>I am first</p>
+        <p>i am second</p>
+    </main>
+    <div class="aqua">
+        <ol>
+            <li>Inline Css</li>
+            <li>Internal Css</li>
+            <li>External Css</li>
+        </ol>
+    </div>
+
+    <h2>This is for External Css</h2>
+
+    <div id="green">
+        <a href="https://www.google.com">Go to google</a>
+        <a href="https://www.facebook.com">Go to facebook</a>
+        <a href="https://www.wikipedia.com">Go to wikipedia</a>
+        Hey i am shreya and today i am in css mood
+        <p>
+            I am a para inside div
+        </p>
+    </div>
+    <span>I am also good</span>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero aut odit culpa cupiditate!
+        Nostrum iste animi ducimus sunt officia! Aperiam perspiciatis repellendus possimus aut assumenda,
+        debitis deserunt repellat suscipit hic, quia, sapiente sunt ipsum.</p>
+
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey i am a box Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi delectus
+            laboriosam voluptatem, mollitia adipisci quia a ex qui numquam similique maxime beatae totam tempore nemo
+            ea. Facere laboriosam iusto quisquam. Libero commodi nobis architecto quia?</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Enter your name">
+    </div>
+</body>
+
+</html>

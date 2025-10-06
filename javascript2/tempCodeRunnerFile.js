@@ -1,0 +1,1 @@
+number.splice(1,2)

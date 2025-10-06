@@ -1,0 +1,26 @@
+ we will focus only on HTML standpoint of SEO. we will not be looking into keyword building and content optimization.
+ object of seo.
+
+ using HTML's semantic tags can greatly benefits both your website's SEO and the maintainability of your code.
+ They offer a way to structure your HTML in a meaningful manner, making your website more accessible and easier to understand.
+
+
+ Types of SEO
+ -> On page SEO
+ -> Off page SEO
+
+ HTML SEO
+ Html developers can implement SEO using the following techniques:
+
+ 1. Set the title very nice & to the point
+ 2. Set the meta keyword tag
+ 3. Set the meta author tag
+       <meta name="author" content="harry">
+ 4. Set a nice URL slug
+ 5. Set the meta description    
+      <meta name="description" content=", , ,"
+ 6. Set a favicon 
+ 7. Compress images & other resources
+ 8. Remove unused HTML/CSS & Js files+compress them.
+ 9. Add alt text to images
+

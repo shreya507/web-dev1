@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Multicolor Website</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        </style>
+    <style>
+        :root{
+            --primary-color: azure;
+            --text-color: black;
+            --secondary-color: #3498db; 
+        }
+
+        :root{
+            --primary-color: #2ec839;
+            --text-color: black;
+            --secondary-color: #30688d;
+        }
+
+        body{
+            background-color: var(--secondary-color);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        nav{
+            background-color: var(--primary-color);
+            padding: 12px;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+            padding: 20px;
+            font-weight: bolder;
+            color: var(--text-color);
+            /* list-style-type: armenian;
+            list-style-position: inside;
+            border: 2px solid black;
+            list-style-image: url(); */
+        }
+
+        ul li a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact</a></li>
+                <li><a href="/">Web pages</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

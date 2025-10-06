@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        h1{
+            color: #ff0000;
+            /* color: darkblue;
+            color: rgb(red, green, blue);
+            color: rgb(23, 69, 74);
+            color: rgba(23, 6, 78, 0.607);
+            color: hsl(235, 19%, 67%); */
+            /* same thing use in background-color as well as color */
+        }
+        /* The specificity of this selector is 1 */
+        h2{
+            color: aqua;
+        }
+        /* The specificity of this selector is 1+10=11 */
+        h1.yellow{
+            color: yellow;
+        }
+         /* The specificity of this selector is 10 */
+        .cred{
+            color: red;
+        }
+         /* The specificity of this selector is 10 */
+        /* .cpurple{
+            color: purple !important;
+        } */
+        /*This is an example of attribute selector.  /* The specificity of this selector is 10 */ */
+        [data-x=a]{
+            /* background-color: beige; */
+            color: blueviolet;
+        }
+
+        /* the specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41 */
+        /* a.harryclass.rohan-class[href]:hover{
+            color: bisque;
+        } */
+
+    </style>
+</head>
+<body>
+    <h1>Lets learn about colors</h1>
+    <div>
+        <h2  class="yellow cred cpurple" data-x="a">CSS Specificity</h2>
+    </div>
+    <p>
+        <ol>
+            <li>Color keywords</li>
+            <li>Hex color code</li>
+            <li>RGB</li>
+            <li>RGBA</li>
+            <li>HSL</li>
+            
+        </ol>
+    </p>
+</body>
+</html>

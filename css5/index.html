@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear And more on CSS Selector</title>
+    <style>
+        .cards {
+            border: 2px solid black;
+            display: flow-root;
+        }
+
+        img {
+            float: left;
+        }
+
+        .card {
+            border: 2px solid red;
+        }
+
+        .card:nth-child(2) {
+            background-color: aqua;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <img width="230px"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhk93-nsKwER1oyMLd-GUnd995a4WLSRHOA&s" alt="">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi fugit sit eaque dolorum neque, velit in quo
+            nam rem eligendi voluptatibus! Est, similique nam suscipit accusamus, saepe et iure dolorem at eaque iusto
+            veritatis.
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem autem nulla minus
+            laboriosam quas eos repellendus laborum illo sunt explicabo deleniti voluptatum, eligendi aperiam.</div>
+        <div class="card">Card3</div>
+    </div>
+</body>
+
+</html>

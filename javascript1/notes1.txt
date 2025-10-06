@@ -1,0 +1,272 @@
+               CHAPTER - 1   (VARIABLES & DATA)
+
+Just like we follow some rules while speaking english (the grammar), we have to follow while writing a javascript
+program. The set of these rules is called syntax in javascript.
+
+What is a variable?
+A variable is a container that stores a value. This is very similar to the containers used to store rice, water and oats.
+(Treat this as an analogy)
+The value of a javascript variable can be changed during the execution of a program.
+    var a = 7; --->Literal
+           |->assignment operator
+    let a = 7;  ===>Declaring variable
+         |->identifier
+
+RUles for choosing variable names
+-> Letters, digits, underscore & $ sign allowed.
+-> Must begin with a $, _ or a letter.
+-> Javascript reserved words cannot be used as a variable name.
+-> Shreya & shreya are different variables (Case sensitive).
+
+Var vs let in javascript
+-> Var is globally scoped while let & const are block scoped.
+-> Var can be updated & re-declared within its scope.
+-> Let can be updated but not re-declared.
+-> Const can neither be updated non be re-declared.
+-> Var variables are intialized with undefined whereas let and const variable are not initialized.
+-> Const must be initialized during declaration unlike let and var.
+
+Primitive data types & Objects
+
+Primitive data types are a set of basic data types in javascript.
+Object is a non primitive datatype in javascript.
+
+These are the 7 primitive data types in javascript
+.Null, Undefined, Boolean, Number, String, Symbol, BigInt.
+
+Object An object in javascript can be created as follows:
+ const item = {
+   Key < -- name: "apple", -->value
+   key <--price: "100" -->value
+ }
+ Quick Quiz
+ Write in a javascript program to store name, phone numbers and marks of a student using objects.
+
+ const item = {
+   name: "apple",
+   phone number: "100", 
+   marks: "100"
+ }
+
+           Practice set 1
+
+Q1.> Create a variable of type string and try to add a number to it 
+A1.>           let text = "The result is: ";
+               let number = 5;
+               let result = text + number;
+               console.log(result);
+
+Q2.> use type of operator to find the datatype of the string in last question.
+A2.>         console.log(typeof(result));
+
+Q3.> Create a const object in javascript can you change it to hold a number later?
+A3.> 1. Const means binding (reference) cannot change
+2. you cannot reassign the object itself to a new value like a number.
+3. But you can modify the internal properties of the object.
+const person = {
+    name: "John",
+    age: 30
+};
+console.log(typeof person);
+
+MODIFY (But we can change the properties inside the object)
+person.age = 26;
+person.name = "Bob";
+
+console.log(person);
+
+Q4.> Try to add a new key to the const object in question 3 were you able to do it?
+A4.> 1 Yes you can add a new key to the object
+2. But you cannot reassign the object itself to a new value like a number.
+const person = {
+    name: "John",
+    age: 30
+    };
+    console.log(typeof person);
+    // Adding a new key
+    person.country = "USA";
+    console.log(person);
+    
+Q5.> Write a js program to create a word-meaning dictionary of 5 words?
+A5.> const dictionary = {
+    "apple": "A red fruit",
+    "car": "A vehicle",
+    "tree": "A plant",
+    "house": "A building",
+    "book": "A written material"
+    };
+    console.log(dictionary);
+    
+
+                    CHAPTER - 2 (EXPRESSIONS & CONDITIONALS)
+
+A fragment of code that produces a value is called an expression Every value written literally is an expression.
+for EX: 77 or "JACK"
+
+Operators in Javascript
+1.> Arithmetic Operators
+
++   (addition)
+-   (subtraction)
+*   (multiplication)
+/   (division)
+%   (modulus)
+**   (exponentiation)
+++   (increment)
+--   (decrement)
+
+2.> Assignment Operators
+=   (assignment) x=y
++=  (addition assignment) x = x+you
+-=  (subtraction assignment) x = x-y
+*=  (multiplication assignment) x = x*y
+/=  (division assignment) x = x/y
+%=  (modulus assignment) x = x%y
+**=  (exponentiation assignment) x = x**y
+
+3.> Comparison Operators
+==   (equal to)
+!=   (not equal to)
+>    (greater than)
+<     (less than)
+>=     (greater than or equal to)
+<=    (less than or equal to)
+===    (strict equal to or equal value and type)
+!==   (strict not equal to or not equal value and type)
+?      (ternary  operator)
+
+4.> Logical Operators
+&&   (logical and)
+||   (logical or)
+!    (logical not)
+Apart from these, we also have type and bitwise operators. Bitwise operators perform bit by bit operations of numbers.
+      <operands-- 7+8 = 15 ->result
+                   |-->operator
+
+Comments in Javascript
+Sometimes we want our programs to contain a text which is not executed by the engine.
+Such a text is called a comment. Comments are ignored by the engine.
+A comment in Javascript can be written as follows:
+let a =2; // This is a single line comment
+
+/*                       |
+I am a                   |
+multiline comment        |-----> multiline comment
+*/                       |
+
+Sometimes comments are used to present the execution of some lines of code.
+let switch = true;
+// switch = false --> Commented lines won't executed
+
+CONDITIONALS statements
+ Sometimes we might have to execute a block of code based off some condition.
+ for example a prompt might ask for the age of the user and if its greater than 18.
+ display a special message.
+
+In Javascript we have to three forms of if .....else statements
+1. if statements
+2. if.... else statements
+3. if.... else if.... else statements
+
+If Statements
+The if statement in javascript looks like this:
+if(condition){
+  // code to be executed
+ }
+The if statement evaluates the condition inside the () If the condition is evaluatedd to true,
+the code inside the body of if is executed else the code is not executed.
+
+if-else statements
+  the if statement can have an optional else clause. The syntax looks something like this
+  if(condition){
+    // code to be executed if condition is true
+  }
+  else{
+    // code to be executed if condition is false
+    }
+  If the condition is true, code inside if is executed else code inside else block is executed
+
+if-else if statement
+Sometimes we might have to keep rechecking a set of conditions one by one until one matches. we use 
+if else if  for achieving this syntax of if ...else if looks like this
+if(age>0){
+  console.log("A valid age");
+  }else if(age>10 && age<15){
+    console.log("But you are a kid");
+    }
+    else if(age>18){
+      console.log("not a kid");
+      }
+    else{
+      console.log("Invalid age");
+    }
+
+JAvascript Ternary Operator
+ Evaluates a condition and executes a block of code based on the condition
+ condition?exp1:exp2
+ Example syntax of ternary operator looks like this:
+ (marks>10)?'yes':'no'
+                 |--> if marks are greater than 10, you are passed else not
+
+
+
+                practice set - 2
+
+Q1.> Use logical operators to find whether the age of a person lies between 10 and 20?
+A1. > let age = 15;
+      if(age>=10 && age <= 20){
+        console.log("AGe is between 10 and 20");
+      }
+      else{
+        console.log("Age is not between 10 and 20");
+      }
+
+Q2.> Demonstrate the use of switch case statements in javascript?
+A2. > let day = 3;
+switch(day){
+  case 1:
+  console.log("Monday");
+  break;
+  case 2:
+  console.log("Tuesday");
+  break;
+  case 3:
+  console.log("Wednesday");
+  break;
+  case 4:
+  console.log("Thursday");
+  break;
+  case 5:
+  console.log("Friday");
+  break;
+  case 6:
+  console.log("Saturday");
+  break;
+  case 7:
+  console.log("Sunday");
+  break;
+  default:
+  console.log("Invalid day");
+  }
+
+Q3.> Write a javascript program to find whether number is divisible by 2 and 3.
+A3. >
+let num = 6;
+if(num % 2 == 0 && num % 3 == 0){ 
+  console.log("Number is divisible by 2 and 3");
+  }else{
+    console.log("Number is not divisible by 2 and 3");
+    }
+
+Q4.> Write a javascript program to find whether a number is even or odd.
+A4. >
+let num = 7;
+if(num % 2 == 0){
+  console.log("Number is even");
+  }else{
+    console.log("Number is odd");
+    }
+
+Q5.> print "you can drive" or "you can't drive" based on the age being greater than 18 using ternary operator.
+A5. > let age = 25;
+console.log(age >= 18) ? "you can drive" : "you can't drive";

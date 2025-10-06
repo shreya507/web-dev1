@@ -1,0 +1,32 @@
+When we use the right tag in right place, it results in a better page layout, better indexing by search engines and better user experience.
+We use the following tag to get the job done.
+
+<header>=>contains nav tag
+<main> , <footer> =>website layout
+Inside the main tag we insert the following tags:
+<main> -> The main opening tag
+<section> -> A page section
+<article> -> A page article
+<aside> -> A page aside
+<figure> -> A page figure
+<figcaption> -> A page figcaption
+</main> -> The main closing tag
+
+creating a page like this is not necessary but it creates a rendered & structured layout.
+Also they are useful for SEO.
+
+Link ATTRIBUTES
+<a href="/contact">Contact us</a> ->Contact page open in some tab
+<a href="/contact" target="_blank">Contact us</a> ->opens in a new tab
+
+we can put any content inside an anchor tag (images, headings etc are all allowed)
+
+If the page is inside a directory, we need to make sure that we link to the correct page. ->some applies to img as well
+We can add links to images like this.
+<a href="/contact"><img src="contact.jpg" width="120" alt="Contact us"></a> ->Height will be set automatically
+
+The Div tag
+div tag is often used as a container for other elements div is a block level element. ->Always takes full width
+
+The Span tag
+span tag is an inline element. ->Takes as much width as necessary.

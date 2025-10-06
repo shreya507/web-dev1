@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        .contain{
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                "side article area"
+                                "footer footer footer";
+
+
+            /* grid-template-columns: [first] 120px [second] 120px [third];
+            grid-template-rows: 100px 100px 100px; */
+        }
+        .items{
+            border: 2px solid palegreen;
+            height: 55px;
+            /* width: 55px; */
+        }
+        
+        .item-1{
+            background-color: azure;
+            grid-area: nav;
+            /* grid-column: 1/2;
+            grid-row: 1/2; */
+            /* or you can do same thing */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+        }
+        .item-2{
+            background-color: darkmagenta;
+            grid-area: side;
+        }
+        .item-3{
+            background-color: darkolivegreen;
+            grid-area: article;
+        }
+        .item-4{
+            background-color: aqua;
+            grid-area: footer;
+            /* grid-column: second/third;
+            grid-row: 1/2; */
+        }
+        /* .item-5{
+            grid-area: nav;
+        } */
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <div class="items item-5">5</div>
+    </div>
+</body>
+</html>

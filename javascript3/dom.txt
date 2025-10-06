@@ -1,0 +1,122 @@
+             Chapter - 5 (Javascript in the Browser)
+
+JAvascript was initially created to make web pages alives. Js can be written right in a web page's HTML to make it interactive.
+
+The browser has an embedded engine called javascript engine or the javascript runtime.
+
+JavaScript's ability in the browser is very limitedd to protect the user's safety. For example a webpage
+an http://google.com cannot access http://codeswear.com and steal information from there.
+
+Developer tools 
+Every browser has some developer tools which makes a developer's life a lot easier.
+F12 on chrome opens Dev tool
+ All HTML elements <-|          |-> All the  errors + logs
+                Elements      console      Network --> All network request
+
+We can also write JAvaScript commands in the console.
+
+The Script tag
+. The script tag is used to insert javascript into an HTML page
+. The script tag can be used to insert external or internal scripts 
+<script>
+    alert("Hello")
+</script>
+//or....
+<script src="/js/thisone.js"></script>
+. The benefit of a seperate Javascript file is that the browser will download it and store it in its cache
+
+Console object methods
+The console object has several methods, log being one of them. Some of them are as follows:
+console.log() - prints the argument (output) to the console
+error() - used for error
+info() - used for special information
+warn() - used for warnings
+debug() - used for debugging
+console.assert() - used to assert a condition something
+console.clear() - used to clear the console
+console.count() - used to count the number of times a function has been called
+console.dir() - used to display an object in a tree-like structure
+console.group() - used to group log messages
+console.groupEnd() - used to end a group of log messages
+console.time() - used to measure the time it takes to execute a block of code
+console.timeEnd() - used to end a timer
+console.table() - used to display data in a table format
+
+you will naturally remember some or all of these with time comprehensive list can be looked up on MDN
+
+Interaction: alert, prompt and confirm
+alert() - Used to invoke a mini window with a msg alert("hello")
+prompt() - used to take input from the user
+     inp = prompt("hi", "No")
+                         |-->optimal default value
+Confirm() - Shows a message and waits for the user to press ok or cancel. Returns true for Ok and false for cancel.
+The exact location & look is determined by the browser which is a limitation.
+
+Window object BOM & DOM
+We have the following when javascript runs in a browser.
+                 Window
+                 / |  \
+                /  |   \
+             DOM   BOM  JavaScript Core 
+
+Window object represents browser window and provides methods to control it. It is a global object.
+
+Document Object Model (DOM): Dom represents the page content as HTML
+     document.body --> Page body as Js object
+     document.body.style.background = "Green" -->Changes page background to Green
+
+Browser Object Model (BOM): The browser Object model represents additional objects provided by the browser (host 
+environment) for working with everything except the document 
+The functions alert/confirm/prompt are also a parts of the BOM
+          location href = "https://codewithharry.com"
+                             |-->Redirect to another URL
+
+         
+                   CHAPTER - 7 (WALKING THE DOM)
+
+DOM tree refers to the HTML page where all the nodes are objects There can be 3 main
+ types of nodes in the DOM tree:
+ 1. Element Node
+ 2. Attribute Node
+ 3. Text Node
+ 4. Comment Node
+
+ In an HTML page, <html> is at the root and <head> and <body> are its children, etc.
+ A text node is always a leaf of the tree.
+ Auto Correction
+If an errorneous HTML is encountered by the browser, it tends to correct it for example, if we put something 
+after the body, it is sutomatically moved inside the body. Another example is <table> tag which must contain <tbody>.
+
+Walking the DOM
+<html>
+<head>
+<title>hello</title>   Document.body  -->Page Body tag
+</head>                    |
+<body>                 Document --> document.documentElement
+       Document.head --| / | \               |
+                     more  children       page HTML tag      
+</body>
+</html>
+
+NOTE: document body can sometimes be null if the javascript is written before the body tag.
+
+Children of an elements
+Direct as well as deeply nested elements of an element are called its children.
+Child nodes -->Elemets that are direct children for example head & body are children of <html>
+Descendant nodes --> All nested elements, children their children and so on...
+
+firstchild, lastchild & childNodes
+element.firstChild --> first child of the element
+element.lastChild --> last child of the element
+element.childNodes --> all children of the element
+Following is always true:
+element.childNodes[0] === element.firstChild
+element.childNodes[element.childNodes.length - 1] === element.lastChild
+
+There is also a method element.hasChildNodes() to check whether there are any child nodes.
+
+NOTE: ChildNodes looks like an array But its not actually an array but a collection. We can use Array.from(collection)
+to convert it into an array. -->Array methods won't work
+
+Notes on DOM Collections
+. 

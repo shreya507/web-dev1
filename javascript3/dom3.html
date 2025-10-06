@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .childcontainer {
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .contains {
+            background-color: coral;
+            margin: 14px;
+            padding: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contains">
+        <section class="childcontainer">
+            <div class="child">I am a child</div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", () => {
+            alert("Child was clicked")
+            e.stopPropagation()
+        })
+
+        document.querySelector(".childcontainer").addEventListener("click", () => {
+            alert("childcontainer was clicked")
+            e.stopPropagation()
+        })
+
+        document.querySelector(".contains").addEventListener("click", () => {
+            alert("contains was clicked")
+        })
+
+        function getRandomcolor() {
+            // let val1 = Math.random();
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+        // let a = setInterval(() => {
+        //     document.querySelector(".childcontainer").style.background = getRandomcolor;
+        // }, 1000);
+        // console.log(a)
+
+         let a = setTimeout(() => {
+            document.querySelector(".childcontainer").style.background = getRandomcolor;
+        }, 1000);
+        console.log(a)
+    </script>
+
+    <!-- <div class="container">
+        <div class="box">Hey I am a box</div>
+    </div>
+    <button id="btn">Change content</button>
+    <script src="dom3.js"></script> -->
+</body>
+
+</html>

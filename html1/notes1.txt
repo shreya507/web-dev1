@@ -1,0 +1,116 @@
+HTML - Hyper text markup language (Skeleton of webpage)
+HTML is the language of the web. it is used to create websites. we use HTML tags to define look & feel of a
+website with understanding of these tags and how to put them together we can create beautiful websites easily.
+
+Then Why CSS & javascript
+HTML is used for defining layout of a page - A parebone page structure.
+CSS is used to add styling to that barebone page created using HTML.
+Javascript is used to program logic for the page  layout eg:- What happens when a user hovers on a text,
+ when to hide or show elements e.t.c.
+
+A Beautiful analogy
+HTML:- car body (only metal)
+CSS:- car paint, decoration etc.
+Javascript:- Car engine + interior logic
+
+We will start learning how to build beautiful layouts in this course.
+
+Installing VS Code
+We can use any text editor of our choice. Here I am using VS Code because it is light weight, open source & from Microsoft.
+Go to google, type VS Code & install it.
+
+Note: You can write HTML even in Notepad. Text editors like VS Code just makes these things easier.
+
+We start building a website by creating a file named index. html is a special filename which is presented when the website
+root address is typed.
+
+A Basic HTML page
+<!Doctype html> - Specifies this is an html5 doc5
+<html> - Root of an HTML page
+<head> - Contains page metadata
+<title> - Title of the page
+<body> - The main body of the page (rendered by the browser)
+</body> - End of the body tag
+<h1> - This is a heading </h1> - heading tag
+<p> My Paragraph </p> - paragraph tag
+</html> - End of the HTML tag
+
+A tag is like a container for either content or other HTML tags.
+
+HTML DOCUMENT => BROWSER => RENDERED page
+IMPORTANT NOTES
+Head & body tags are children of HTML tag.
+HTML is the parent of head & body tags.
+Most of the HTML elements have opening & closing tag content in between opening & closing tags.
+Some HTML tags have no content. There are called empty elements eg <br>
+We can either use htm or html extension
+You can use "inspect element" or "view page source" option from chrome to look into a websites's HTML code.
+HTML element = start tag + content +end tag
+
+Comments in HTML 
+comments in HTML are used to most text which should not be parsed. They can help document the source code.
+<!-- HTML comment -->
+ Case Sensitivity
+ HTML is a case insensitive language. This means that <p> and <P> are same. <H1> and <h1> tags are same.
+
+
+ We can add elements inside the body tag is to define the page element.
+
+
+
+ HTML Elements
+ Everything from starting to the ending tag
+ <body> => Opening tag
+ -> Content <-
+ </body> => Closing tag
+ HTML ATTRIBUTES
+ used to add more information corresponding to an HTML tag.
+ Example:- <a href="https://codewithharry.com/"> Harry </a>
+
+ we can either use single or double quotes in attribute
+
+ The Heading tag is used to mark headings in html. from h1 to h6, we have tags for the most 
+ important to the least important heading.
+ Note:- we should not use HTML headings to make text thick or bold.
+ <h1> Heading1 </h1>
+ <h2> Heading2 </h2>
+ <h3> Heading3 </h3>
+ <h4> Heading4 </h4>
+ <h5> Heading5 </h5>
+ <h6> Heading6 </h6>
+
+The Paragrapgh tag
+Paragraph tags are used to add paragraph to an HTML page.
+<p> This is a paragraph </p>
+
+The Anchor tag
+The anchor tag is used to add links to an existing content inside an HTML page.
+<a href="https://codewithharry.com/"> Click here </a>
+
+The img tag
+img tag is used to add image in an HTML page.
+<img src="image.jpeg"> (relative url of an image)
+
+Bold, Italic and underline tags
+We can use bold, italic and underline tags to highlight the text as follows.
+<b> This is bold text </b>
+<i> This is italic text </i>
+<u> This is underline text </u>
+
+br tag
+the br tag is used to create line breaks in an HTML document.
+
+big and small tags
+we can make the text a bit larger and a bit smaller using big and small atgs respectively.
+
+hr tag
+<hr> tag in HTML is used to create a horizontal rules often used to separate the content
+
+subscript & Superscript
+we can add subscript and superscript in HTML as follows:
+<sub> this </sub> is subscript
+<sup>this</sup> is superscript
+
+pre tag
+HTML always ignores extra spaces and newlines. In order to display a piece of text as is, we use pre tag.
+<pre> This is a pre tag </pre>

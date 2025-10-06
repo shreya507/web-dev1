@@ -1,0 +1,251 @@
+                         Chapter - 3 (Loops & functions)
+
+we use loops to perform repeated actions for example - If you are designed task of printing numbers from 1 to 100,
+ it will be very hectic to do it manually, loops help us automate such tasks
+
+ Types of loops in javascript 
+
+ 1. For loop -> loop a block of code no. of times
+ 2. While loop -> loops a block based on a specific condition.
+ 3. Do-while loop -> while loop variant which runs atleast once.
+ 4. For-in loop -> loops through the keys of an object.
+ 5. For-of loop -> loops through the values of an object.
+
+The for loop
+The syntax of a for loop looks something like this
+  for(statement1 ; statement; statement3){
+    // code to be executed
+    }
+-> statement1 is executed one times
+-> statement2 is the condition base on which the loop runs (loop body executed)
+-> statement3 is executed everytime the loop body is executed
+
+Quick Quiz: Write a sample for loop of your choice
+for(let i =0; i<=n; i++ ){
+    console.log(i);
+}
+
+The for-in loop
+The syntax of for-in loop looks like this 
+ for(key in object){
+    // code to be executed
+    }
+Quick Quiz : Write a sample program demonstrating for-in loop
+let person = {
+    name: "John",
+    age: 30,
+    occupation: "Software Engineer"
+};
+for(let key in person){
+    console.log(key + " : " + person[key]);
+    }
+
+NOTE: for-in loop also work with arrays which will be discussed in the later chapters.
+
+The for-of loop
+The syntax of for-of loop looks like this
+for(value of iterable){
+                |-->iterable data structure like arrays, strings etc.
+    // code to be executed
+    }
+Quick Quiz: write a sample program demonstrating for-of loop
+let fruits = ["apple", "banana", "cherry"];
+for(let fruit of fruits){
+    console.log(fruit);
+    }
+
+The while loop
+The syntax of while loop looks like this
+while(condition){
+    // code to be executed
+    }
+NOTE: If the condition never becomes false, the loop will never end and this might crash the runtime.
+Quick Quiz: Write a sample while loop of your choice.
+while(n>10){
+console.log(n);
+n--;}
+
+The do-while loop
+The syntax of do-while loop looks like this
+do{
+    // code to be executed
+    }while(condition);
+
+Quick Quiz: Write a sample program demonstrating do-while loop
+ let n = 1;
+do{
+    console.log(n);
+    n++;
+    }while(n<=5)
+  
+Functions in Javascript
+A javascript functions is a block of code designed to perform a particular task.
+Syntax of a function looks something like this:
+function mufunc(){
+    // code to be executed
+}
+
+function binodfunc(parameter1, parameter2){
+                       |-->Function with parameter
+    // code to be executed
+             |-->Here the parameter behave as local variable
+}
+binodFunc(7,8) ==>Function Invocation
+
+Functions Invocation is a way to use the code inside the function.
+
+A function can also return a value the value is "returned" back to the caller.
+
+Const sum = (a,b) ==>{
+    |
+   Another way to create &            let c = a+b;
+    use the functions                 return c;  ==>returns the sum
+    |                                  }
+    |  
+let y = sum(1,3)
+console.log(y) -->prints 4
+
+
+               Practice Set - 3
+
+Q1.> Write a program to print the marks of a student in an object using for loop
+obj = { harry:98, rohan:70, akash:7}
+A1.> let obj = {
+  harry: 98,
+  rohan: 70,
+  akash: 7
+};
+for (let student in obj) {
+  console.log(student + " got " + obj[student] + " marks");
+}
+
+Q2.> Write the program in Q1 using for in loop.
+A2.> let obj = {
+  harry: 98,
+  rohan: 70,
+  akash: 7
+};
+for (let key in obj) {
+  console.log(key + " got " + obj[key] + " marks");
+}
+
+Q3.> Write a program to print "Try again" unitll the user enters the correct number.
+A3.> let correctNumber = 7; // You can set any number you want
+let userInput;
+while (userInput != correctNumber) {
+  userInput = prompt("Enter the correct number:");
+  if (userInput != correctNumber) {
+    console.log("Try again");
+  }
+}
+console.log("Congratulations! You entered the correct number.");
+
+Q4.> write a function to find mean of 5 numbers.
+A4.> function findMean(a, b, c, d, e) {
+  let sum = a + b + c + d + e;
+  let mean = sum / 5;
+  return mean;
+}
+// Example usage:
+let result = findMean(4, 7, 10, 15, 9);
+console.log("Mean is:", result);
+
+
+                  Chapter - 4  (Strings)
+
+Strings are used to store and manipulate text. String can be created using the following syntax:
+let str = "Hello, World!";  --> Creates a string 
+name.length
+      |-->This property prints length of the string
+
+strings can also be created using single quotes
+   let name = 'Harry'
+
+Template Literals
+Template literals use backtics instead of quotes to define a string.
+let name = 'harry'
+with template literals, it is possible to use both single as well as double quotes inside a string
+                                     |----> single quotes
+  let sentence = 'The name "is" jack's'
+                 |-->backtic  |-->double quotes
+we can insert variable directly in template literal. This is called string interpolation
+          let a = 'This is ${name}' --> Print 'This is a Harry'
+                        |_________|
+                            |--> name is a variables
+
+Escape Sequence Characters
+If you try to print the following string, javascript will misunderstanding it
+let name = 'Adam D 'Angelo'
+
+we can use single quopte escape sequence to solve the problem
+let name = 'Adam D\'Angelo'
+
+Similarly we can use \"inside a string with double quotes.
+Other escape sequence characters are as follows.
+\n --> Newline
+\t --> Tab
+\r -->Carriage return
+
+String Properties and methods
+1. let name = "Harry"
+ name.length ---> prints 5
+2. let name = "Harry"
+name.toUpperCase() ---> prints HARRY
+3. let name = "Harry"
+name.toLowerCase() ---> prints harry
+4. let name = "Harry"
+name.charAt(0) ---> prints H
+5. let name = "Harry"
+name.indexOf('r') ---> prints 2
+6. let name = "Harry"
+name.lastIndexOf('r') ---> prints 2
+7. let name = "Harry"
+name.trim() ---> prints Harry
+8. let name = "Harry "
+name.slice(2,4) --> prints ry  (from 2 to 4, 4 not included)
+9. let name = "Harry "
+name.split(' ') ---> prints ['Harry', '']
+10. let name = "Harry "
+name.replace('Harry', 'Jack') ---> prints Jack
+11. let name = "Harry "
+name.includes('r') ---> prints true
+12. let name = "Harry " 
+name.startsWith('H') ---> prints true
+13. let name = "Harry "
+name.endsWith('y') ---> prints true
+14. let name = "Harry "
+name.concat('Potter') ---> prints Harry Potter
+15. let name = "Harry "
+name.repeat(3) ---> prints HarryHarryHarry
+16. let name = "Harry "
+name.slice(2) -->prints rry  (from 2 to end)
+
+Strings are immutable Inorder to access the character at an index we use the folowing syntax:
+let name = "Harry"
+name[0] ---> prints H
+name[1] ---> prints a
+
+
+                         Practice Set - 4
+
+Q1.> What will the following print in javascript?
+A1.>         console.log("har\"".length)
+
+Q2.> Explore the includes, starts with & ends with functions of a string
+A2.> let name = "Harry"
+console.log(name.includes('r'))  // prints true
+console.log(name.startsWith('H'))  // prints true
+console.log(name.endsWith('y'))  // prints true
+
+Q3.> Write a program to convert a given string to to LowerCase
+A3.> let name = "Harry"
+console.log(name.toLowerCase())  // prints harry
+
+Q4.> Extract the amount out of this string "Please give RS 1000"
+A4.> let name = "Please give RS 1000"
+console.log(name.slice(13,18))  // prints 1000
+
+Q5.> Try to change 4th character of a given string were you able to do it?
+A5.> let name = "Harry"
+console.log(name.slice(0,3) + 'a' + name.slice(4))
+console.log(name)  // prints Harrya

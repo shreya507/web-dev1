@@ -1,0 +1,142 @@
+                               Chapter-2
+Colors & Backgrounds
+CSS rules are simple key-value pairs with a selector we can write CSS rules to change color and set backgrounds.
+
+The color property
+The CSS color property can be used to set the text color inside an element
+p{
+    color:red;             ->text color will be changed to red
+}
+similarly we can set color for different elements
+
+Types of color values
+Following are the most commonly used color values in CSS
+1. RGB -> Specify color using Red, green, blue values eg. rgb(200,98,70)
+2. HEX code -> Specify color using hex code eg. #ff7180
+3. HSL -> Specify the color using hsl values eg. hsl(8,90%,63%) ->hue,saturation,lightness
+
+The value of the color or background color is provided as any one of these values.
+
+NOTE: We also have an RGBA and HSLA values for color but they are rarely used by beginners A stands for alpha.
+
+The background-Color property
+The CSS background-color property specifies the background color of a container.
+For eg:
+     brown{
+        background-color: brown;     -> can be other types of colors as well
+     }
+
+The background-image property
+Used to set an image as the background.
+body{
+    background-image: url('image.jpg');
+}
+The image is by default repeated in X & Y direction.
+
+The background-repeat property
+can be any of:
+-> repeat-X = repeat in horizontal direction
+-> repeat-Y = repeat in vertical direction
+-> no-repeat = do not repeat the image
+see more possible values at MDN docs
+
+The background-size property
+can be following:
+-> cover = fits & no empty space remains
+-> contain = fits & image is fully visible
+-> auto = Display in original size
+-> {{width}} = set width & height will be set automatically
+-> {{width}} {{height}} = set width & height manually
+
+NOTE: Always check the MDN docs to dissect a given CSS property. Remember, practice will make you perfect
+
+The background-position property
+sets the starting position of a background image.
+div1{
+    background-position: left top;
+}
+
+The background-attachment property
+Defines a scrollable/non-scrollable character of a background image.
+div2{
+    background-attachment: fixed;
+}
+
+The background shorthand
+A single property to set multiple background properties.
+div3{
+    background: red url('image.jpg') no-repeat fixed left top;
+}
+One of the properties can be missing given the others are in order.
+
+
+
+                  CHAPTER-3
+
+
+The CSS box model looks at all the HTML elements as boxes.
+                        margin
+                        Border
+                        padding
+                        Content
+        
+Setting Width & height
+We can set width & height in CSS as follows
+#box{
+    height: 70px;
+    width: 70px;
+}
+NOTE that the total width/height is calculated as follows:
+Total height = height + top/bottom padding + top/bottom border + top/bottom margin
+Total width = width + left/right padding + left/right border + left/right margin
+
+Setting margin & padding 
+We can set margin and padding as follows:
+box{
+    margin: 3px;                                                                          Clockwise direction
+    padding: 3px;                      (set top, bottom, left, right values)                     top
+}
+.boxMain{                                                                               left               right
+    margin: 7px(top) 0px(right) 2px(bottom) 11px(left);
+}
+                                                                                                  bottom
+
+.boxLast{
+    margin: 7px(top&bottom) 3px(left&right);
+}
+We can also set individual margins/padding like this:
+margin-top: 70px;
+margin-bottom: 70px;
+margin-left: 70px;
+margin-right: 70px;
+This is same goes with padding
+
+Setting border
+we caan set the border as follows:
+.bx{
+    border-width: 2px;
+    border-style: solid;                  or just set border: 2px solid red;
+    border-color: red;                        (shorthand)
+}
+
+Border Radius
+We can set border radius to create rounded borders
+div2{
+    border-radius: 10px;
+}
+
+Margin Collapse
+When two margins from different elements overlap, the equivalent margin is the greater of the two.
+This is called margin collapse.
+                     |______| margin 3px
+                    7px ....... 1-3px            margin between then is collapsed to the bigger margin
+                     |______| margin 70px
+
+Box Sizing
+Determines what out of padding and border is included in elements 
+                     width and height can be content-box or border-box
+               Included only content width/height        |
+div1{                                                    |
+    box-sizing: content-box;                             |
+}                   |--------------------> The content width and height includes content + padding + border
+

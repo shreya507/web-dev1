@@ -1,0 +1,68 @@
+Block Elements (Most Commonly Used First)
+
+<div>: A generic for flow content
+<p>: Paragraph
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Headings
+<ul>: Unordered list
+<ol>: Ordered list
+<li>: List item
+<form>: A section containing form controls
+<table>: table
+<section>: A standalone section of a document
+<header>: A container for introductory content or a set of navigational links
+<footer>: A container for footer content or page
+<nav>: A section of a page that contains navigation links.
+<article>: A self-contained piece or composition in a document
+<aside>: A section of a page that contains information indirectly related to the main
+<main>: The main content of a document
+<fieldset>: A set of form controls grouped under a common name
+<blockquote>: A block of text that is a quotation from another source
+<pre>: Performatted text
+<canvas>: A container used to draw graphics via javascript
+<dl>: Description list
+<dt>: Term in a description list
+<dd>: Description in a description list
+<figure>: Any content that is referenced from the main content
+<figcaption>: A caption for a <figure> Elements
+<address>: Contact information for the author or owner of the document
+<hr>: A thematic break or a horizontal rule
+<tfoot>: Footer of a table
+
+
+Inline Elements (Most Commonly Used First)
+<a>: A hyperlink or anchor
+<img>: An image
+<span>: Generic inline container
+<input>: Input field
+<label>: Label for a form Elements
+<strong>: Strong importance, seriousness,Strong emphasis, or urgency
+<em>: Emphasized text
+<br>: Line break
+<cite>: Citation
+<code>: Code snippet
+<b>: Bold text
+<q>: Short inline Quotation
+<i>: Italic text
+<sub>: Subscript
+<sup>: Superscript
+<time>: A specific date or time
+<u>: Underlined text
+<mark>: Highlighted text
+<abbr>: Abbreviation
+<kbd>: Keyboard input
+<small>: Small text
+<var>: Variable in a mathematical expression or programming context.
+<samp>: Sample output
+<data>: Machine-readable translation of content
+<acronym>: Acronym (Not supported in HTML5)
+
+
+What is an ID?
+An ID is a unique identifier for an element. It is used to identify a specific element within a
+document. IDs are used to link to a specific element using the id attribute in the href attribute of
+an <a> element or the id attribute in the target attribute of an <a> element.
+
+What is class?
+A class is a way to group elements that have a common style or function. It is used to
+apply a style or function to multiple elements at once. Classes are used to style elements using
+CSS and to apply JavaScript functions to elements.
